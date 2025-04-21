@@ -51,7 +51,11 @@
 
 ### 2.3. Live Serve 셋팅(일부 실행 오류 발견됨)
 
-- 파악 후 업데이트 예정
+- 윈도우 검색 > `시스템 환경 변수 편집` 입력 > 환경변수...
+- Adminstrator에 대한 사용자 변수
+  - Path 내용 추가 : `C:\Windows\System32`
+- 시스템 변수
+  - Path 내용 추가 : `C:\Windows\System32`
 
 # WAS(Web Application service)
 
@@ -271,6 +275,21 @@ git status
 ```bash
 git add .
 ```
+
+- Git 작업내역 메모하기
+
+```bash
+git commit
+```
+
+- 새로운 작업단위, 즉 브랜치 생성하기
+
+```bash
+git branch header
+git switch header
+```
+
+- 월요일 할 일☆
 
 ## 3. GitHub 관리
 
