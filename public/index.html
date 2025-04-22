@@ -6,8 +6,8 @@
     <title>나의 til</title>
   </head>
   <body>
-    <!-- 전체 레이아웃 //실무에서는 헤더 푸터 안쓰고 div로 쓰는듯, 전체구조를 짜고 세무적으로 기록한다 -->
-    <div>
+    <!-- 전체 레이아웃 //전체구조를 짜고 세무적으로 기록한다 , wrap :감싸다 -->
+    <div class="wrap">
       <!-- 상단 -->
       <header class="header">
         <div class="layout">
@@ -76,8 +76,25 @@
       </header>
       <!-- 메인 -->
       <main>
-        <!-- event  : A 담당자 -->
-        <div></div>
+        <!-- banner  : A 담당자 -->
+        <div classs="banner">
+          <div class="banner_list">
+            <a href="#"
+              ><img src="images/v1.png" alt="banner" title="banner"
+            /></a>
+          </div>
+          <div class="banner_list">
+            <a href="#"
+              ><img src="images/v2.jpg" alt="banner2" title="banner2"
+            /></a>
+          </div>
+          <button class="slide_bt banner_left">
+            <img src="images/slider_arrow.svg" alt="left" title="left" />
+          </button>
+          <button class="slide_bt banner_right">
+            <img src="images/slider_arrow.svg" alt="light" title="light" />
+          </button>
+        </div>
         <!-- tour -->
         <div></div>
         <!-- trip -->
