@@ -1,0 +1,93 @@
+.header {
+  width: 100%;
+  height: 163px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+}
+.header_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.header_top_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo > a > img {
+  width: 150px;
+  height: 38px;
+}
+
+.serch {
+}
+.search_form {
+  display: flex;
+  align-items: center;
+  width: 460px;
+}
+
+.search_form_word {
+  /* calc( + ) 계산하는 수식, 기호 양쪽으로 띄어쓰기 해줘야함  */
+  width: calc(100% - 50px);
+  height: 50px;
+  background-color: #f7f7f8;
+  border: none;
+  /* border-radius: 왼쪽상단부터 시계방향 */
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 15px;
+}
+.search_form_button {
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f8;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  font-size: 0;
+  cursor: pointer;
+  /*  background-color: red;
+  background-image: url("../images/btn_search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-size: 18px; */
+
+  background: #f7f7f8 url("../images/btn_search.svg") no-repeat center;
+  background-size: 18px;
+}
+
+.header_top_right {
+}
+.member {
+  display: flex;
+  gap: 20px;
+}
+.member > li > a {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 16px;`
+}
+.header_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_bottom_nav {
+}
+.nav {
+  display: flex;
+}
+.header_bottom_eventmenu {
+}
+.cupon {
+  display: flex;
+  align-items: center;
+}
+.cupon > li > a {
+  display: flex;
+  align-items: center;
+}
