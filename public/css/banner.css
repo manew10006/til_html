@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  margin-top: 30px;
+}
+.banner_slide {
+  display: flex;
+  gap: 25px;
+}
+
+.banner_list {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.banner_list img {
+  width: 100%;
+}
+
+.slide_bt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.banner_left {
+  left: 0;
+  transform: translateX(-50%);
+}
+.banner_right {
+  right: 0;
+  transform: translateX(50%);
+}

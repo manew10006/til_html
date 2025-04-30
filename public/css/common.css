@@ -42,7 +42,8 @@ body {
 }
 
 .layout {
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 
   /* margin : 위아래  좌우; 단축해서 적을 수 있다.
