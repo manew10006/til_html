@@ -1,0 +1,147 @@
+.tour {
+  margin-top: 65px;
+}
+
+.section_top {
+  padding-bottom: 22px;
+}
+.section_title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+.section_desc {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.75);
+}
+.section_list {
+}
+.section_category {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+.section_category_bts {
+  display: flex;
+  gap: 6px;
+}
+.section_category_bts > li {
+}
+.section_category_bts > li > button {
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 52px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+.section_category_bts > li > button.cate_focus {
+  border: 1px solid #333333;
+  color: #fff;
+  background-color: #333333;
+  font-weight: 700;
+}
+
+.section_slide {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.item > a {
+}
+.item_image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.item_image > img {
+  width: 100%;
+  /* 비율을 유지하면서 영역에 이미지 가득 채우기 */
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.item_name {
+  position: absolute;
+  left: 20px;
+  top: 235px;
+
+  background-color: #1769ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.item_text {
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.item_cupon {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1769ff;
+  /* 줄내림 방지 */
+  white-space: nowrap;
+  /* 말줄임 처리 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_desc {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  /* 줄내림 방지 */
+  white-space: nowrap;
+  /* 말줄임 처리 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_price {
+  font-size: 16px;
+  font-weight: 400;
+}
+.item_price > b {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section_bts {
+  display: flex;
+  justify-content: center;
+}
+.section_bts > a {
+  border: 1px solid #e5e5e5;
+  padding: 20px 40px;
+  border-radius: 40px;
+
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.section_bts > a > img {
+  transform: translateY(1px);
+}

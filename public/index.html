@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/tour.css" />
   </head>
 
   <body>
@@ -93,21 +94,23 @@
           <div class="banner">
             <div class="banner_slide">
               <div class="banner_list">
-                <a href="#"
-                  ><img src="images/v1.png" alt="banner" title="banner"
-                /></a>
+                <a href="#">
+                  <img src="images/v1.png" alt="banner" title="배너" />
+                </a>
               </div>
               <div class="banner_list">
-                <a href="#"
-                  ><img src="images/v2.jpg" alt="banner2" title="banner2"
-                /></a>
+                <a href="#">
+                  <img src="images/v2.jpg" alt="banner2" title="배너2" />
+                </a>
               </div>
             </div>
+
             <button class="slide_bt banner_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />
             </button>
+
             <button class="slide_bt banner_right">
-              <img src="images/slider_arrow.svg" alt="light" title="light" />
+              <img src="images/slider_arrow.svg" alt="right" title="right" />
             </button>
           </div>
           <!-- tour -->
@@ -117,10 +120,10 @@
               <span class="section_desc">마감임박! 금주의 특가 여행 추천</span>
             </div>
             <div class="section_list">
-              <!-- start목록영역 -->
+              <!--Start 목록영역 -->
               <div class="section_category">
                 <ul class="section_category_bts">
-                  <li><button>마감임박</button></li>
+                  <li><button class="cate_focus">마감임박</button></li>
                   <li><button>패키지</button></li>
                   <li><button>국내숙소</button></li>
                   <li><button>해외숙소</button></li>
@@ -131,52 +134,78 @@
                 <!-- start 추후 JSON 데이터 연동으로 변경 예정 -->
                 <div class="item">
                   <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
+                    <div class="item_image">
+                      <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    </div>
+
+                    <span class="item_name">나트랑</span>
+
+                    <div class="item_text">
+                      <span class="item_cupon">
+                        [10%쿠폰] 아동 동반 가족여행 강력 추천
+                      </span>
+                      <p class="item_desc">
+                        방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
+                        윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
+                      </p>
+                      <span class="item_price"><b>109,000</b>원~</span>
+                    </div>
                   </a>
                 </div>
                 <div class="item">
                   <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
+                    <div class="item_image">
+                      <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    </div>
+
+                    <span class="item_name">나트랑</span>
+
+                    <div class="item_text">
+                      <span class="item_cupon">
+                        [10%쿠폰] 아동 동반 가족여행 강력 추천
+                      </span>
+                      <p class="item_desc">
+                        방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
+                        윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
+                      </p>
+                      <span class="item_price"><b>109,000</b>원~</span>
+                    </div>
                   </a>
                 </div>
                 <div class="item">
                   <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
+                    <div class="item_image">
+                      <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                    </div>
+
+                    <span class="item_name">나트랑</span>
+
+                    <div class="item_text">
+                      <span class="item_cupon">
+                        [10%쿠폰] 아동 동반 가족여행 강력 추천
+                      </span>
+                      <p class="item_desc">
+                        방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
+                        윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
+                      </p>
+                      <span class="item_price"><b>109,000</b>원~</span>
+                    </div>
                   </a>
                 </div>
+
                 <!-- end 추후 JSON 데이터 연동으로 변경 예정 -->
               </div>
               <!-- end목록영역 -->
             </div>
             <div class="section_bts">
-              <a href="#">투어 바로가기</a>
-              <img
-                src="images/icon_linkArrow.svg"
-                alt="더보기"
-                title="투어 홈
-            바로가기"
-              />
+              <a href="#">
+                투어 홈 바로가기
+                <img
+                  src="images/icon_linkArrow.svg"
+                  alt="투어 홈 바로가기"
+                  title="투어 홈 바로가기"
+                />
+              </a>
             </div>
           </div>
           <!-- trip -->
@@ -188,7 +217,9 @@
         </div>
       </main>
       <!-- 하단 -->
-      <footer></footer>
+      <footer>
+        <div></div>
+      </footer>
     </div>
   </body>
 </html>
