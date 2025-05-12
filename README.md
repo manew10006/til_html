@@ -51,28 +51,32 @@
 
 ### 2.3. Live Serve 셋팅(일부 실행 오류 발견됨)
 
-- 파악 후 업데이트 예정
+- 윈도우 검색 > `시스템 환경 변수 편집` 입력 > 환경변수...
+- Adminstrator에 대한 사용자 변수
+- Path 내용 추가 : `C:\Windows\System32`
+- 시스템 변수
+- Path 내용 추가 : `C:\Windows\System32`
 
 # WAS(Web Application service)
 
 ## 1. 기본 추천 폴더 구조
 
-- `프로젝트명/puvlic 폴더` 생성
-- `프로젝트명/puvlic/images 폴더` 생성
+- `프로젝트명/public 폴더` 생성
+- `프로젝트명/public/images 폴더` 생성
   - jpg, png(추천), gif, svg(추천), webp(추천 :용량 최소) 등
-- `프로젝트명/puvlic/css폴더` 생성
+- `프로젝트명/public/css폴더` 생성
 
 ```
 common.css(공통적용), header.css, footer.css 등 영역별로 생성
 ```
 
-- `프로젝트명/puvlic/js폴더` 생성
+- `프로젝트명/public/js폴더` 생성
 
 ```
 각 종류의 라이브러리.js, header.js, footer.js 등 영역별로 생성
 ```
 
-- `프로젝트명/puvlic/assets폴더` 생성
+- `프로젝트명/public/assets폴더` 생성
 
 ```
 프로젝트 관련 문서 (회의록, 요구사항 명세서, 계약서 등), 디자인 및 멀티미디어 리소스 등
@@ -81,7 +85,7 @@ common.css(공통적용), header.css, footer.css 등 영역별로 생성
 ## 2. 홈 페이지(index.html)
 
 - 파일명 준수 (소문자 기준)
-- `프로젝트명/puvlic/index.html 파일` 생성
+- `프로젝트명/public/index.html 파일` 생성
 - 키보드 단축키 활용 : 1열 `!탭`
 
 ```html
