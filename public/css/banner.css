@@ -7,6 +7,10 @@
   gap: 25px;
 }
 
+.sw_banner {
+  border-radius: 15px;
+}
+
 .banner_list {
   border-radius: 15px;
   overflow: hidden;
@@ -32,6 +36,8 @@
   border: 1px solid #e6e6e6;
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+
+  z-index: 100;
 }
 .banner_left {
   left: 0;

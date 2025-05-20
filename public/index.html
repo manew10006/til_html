@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>나의 til</title>
+    <!-- 외부라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/tour.css" />
+
     <!-- js 초기 코드  (상단이 좋은자리는 아니지만, js를 통해 html이 다 불러오고 js가 실행되도록 제어한다) -->
     <script src="js/index.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/banner.js"></script>
   </head>
 
   <body>
@@ -95,17 +105,12 @@
         <div class="layout">
           <!-- banner  : A 담당자 -->
           <div class="banner">
-            <div class="banner_slide">
-              <div class="banner_list">
-                <a href="#">
-                  <img src="images/v1.png" alt="banner" title="배너" />
-                </a>
+            <!-- 외부라이브러리 주의: 절대 swiper 단어를 고치지 않는다-->
+            <div class="swiper sw_banner">
+              <div class="swiper-wrapper">
+                <!-- API 연동 -->
               </div>
-              <div class="banner_list">
-                <a href="#">
-                  <img src="images/v2.jpg" alt="banner2" title="배너2" />
-                </a>
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
 
             <button class="slide_bt banner_left">

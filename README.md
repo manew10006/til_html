@@ -183,3 +183,114 @@ window.addEventListener("DOMContentLoaded", function () {
 - `keyup` : 키보드에서 키 입력 후 이벤트 (누르고 뗏을 때)
 
 ### 7. 활용빈도가 높은 Form 관련 이벤트
+
+## CSS 제어법
+
+### 1. inline 형태로 적용하기 (가끔 활용함)
+
+- `대상.style.css속성 = "값"`
+
+```js
+// DOM 만 완성화면 됩니다. 기준으로 코드를 진행함.
+// DOM 은 html 태그 구조를 말한다
+// 아래 문장은 html이 완성되어졌다면 실행하자
+window.addEventListener("DOMContentLoaded", function () {
+  // 아래 구문은 header변수를 만들고 html(document)에서 css 선택자로 값을 셋팅
+  const header = this.document.querySelector(".header");
+  const logo = this.document.querySelector(".logo");
+  const search = this.document.querySelector(".search");
+  const member = this.document.querySelector(".header_top_right");
+  const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
+
+  // window에 스크롤(scroll event)이 일어나면 기능이 작동한다
+  this.window.addEventListener("scroll", function () {
+    //반응형을 고려하면 scrollY는 가까이 두는게 좋다(편의성, 성능은 살짝 떨어지지만..!)
+    //스크롤이 되었을 때 스크롤바의 Y축의 상단 픽셀 위치값
+    const scrollY = window.scrollY;
+
+    // header Top 영역의 높이값을 px로 알고싶다
+    const headerTopH = this.document.querySelector(".header_top");
+    console.log(headerTopH.offsetHeight); //offsetHeight = div의 높이값
+
+    // 만약 헤더 높이보다 작으면 전체를 보이고 , 그렇지 않으면 일부분을 숨긴다.
+    if (scrollY <= headerTopH.offsetHeight) {
+      // console.log("모두 보여라");
+      logo.style.display = "block";
+      eventMenu.style.display = "block";
+    } else {
+      // console.log("일부만 보여라");
+      // 로고를 css로 제어
+      logo.style.display = "none";
+      eventMenu.style.display = "none";
+      search.style.position = "absolute";
+      search.style.left = "350px"; // 0은 타입 상관없음!
+      search.style.top = "60px"; // 문자열로 넣어야 인식!
+      //이 방식은 좀 힘들다..! 다른방법을 보자!
+    }
+  });
+});
+```
+
+### 2. css 클래스 활용하기 (적극 활용)
+
+- `대상.classList.add("클래스명")`
+- `대상.classList.remove("클래스명")`
+- `대상.classList.toggle("클래스명")` : 클래스가 있으면 제거, 없으면 추가
+- `대상.classList.contain("클래스명")` : 클래스가 있는지 확인 (true/false)
+
+```js
+// DOM 만 완성화면 됩니다. 기준으로 코드를 진행함.
+// DOM 은 html 태그 구조를 말한다
+// 아래 문장은 html이 완성되어졌다면 실행하자
+window.addEventListener("DOMContentLoaded", function () {
+  // 아래 구문은 header변수를 만들고 html(document)에서 css 선택자로 값을 셋팅
+  const header = this.document.querySelector(".header");
+  const headerTop = this.document.querySelector(".header_top");
+  const logo = this.document.querySelector(".logo");
+  const search = this.document.querySelector(".search");
+  const member = this.document.querySelector(".header_top_right");
+  const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
+
+  // window에 스크롤(scroll event)이 일어나면 기능이 작동한다
+  this.window.addEventListener("scroll", function () {
+    //반응형을 고려하면 scrollY는 가까이 두는게 좋다(편의성, 성능은 살짝 떨어지지만..!)
+    //스크롤이 되었을 때 스크롤바의 Y축의 상단 픽셀 위치값
+    const scrollY = window.scrollY;
+
+    // header Top 영역의 높이값을 px로 알고싶다
+    const headerTopH = this.document.querySelector(".header_top");
+    console.log(headerTopH.offsetHeight); //offsetHeight = div의 높이값
+
+    // 만약 헤더 높이보다 작으면 전체를 보이고 , 그렇지 않으면 일부분을 숨긴다.
+    if (scrollY <= headerTopH.offsetHeight) {
+      // console.log("모두 보여라");
+      logo.style.display = "block";
+      eventMenu.style.display = "block";
+      //class 제거로 변경
+      search.classList.remove("search_down");
+      member.classList.remove("member_down");
+      header.classList.remove("header_down");
+      headerTop.classList.remove("header_top_down");
+    } else {
+      // console.log("일부만 보여라");
+      // 로고를 css로 제어
+      logo.style.display = "none";
+      eventMenu.style.display = "none";
+      //class 추가로 변경 (html 문서에 class명을 추가 부여한다)
+      search.classList.add("search_down");
+      member.classList.add("member_down");
+      header.classList.add("header_down");
+      headerTop.classList.add("header_top_down");
+    }
+  });
+});
+```
+
+## 슬라이드 외부 라이브러리 활용하기
+
+- 외부라이브러리는 최상단에 배치한다 (외부의 것을 먼저 읽어드리고 자신의 것을 읽어야 충돌이 없다)
+
+- 절대로 직접만들지 않는다 (요구 및 수정사항이 어어어엄청 많다)
+- `Swiper` (매우추천 : Vue React 둘 다 지원!) : https://swiperjs.com/
+- `Slick` : https://kenwheeler.github.io/slick/
+- `bxSlide` (비추 : 기능이 별로없다.. 반응형도 안되고..) :https://bxslider.com/
