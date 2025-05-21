@@ -39,6 +39,8 @@
 
   font-size: 14px;
   font-weight: 400;
+
+  transition: all 0.4s;
 }
 .section_category_bts > li > button.cate_focus {
   border: 1px solid #333333;
