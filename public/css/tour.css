@@ -19,6 +19,7 @@
   color: rgba(0, 0, 0, 0.75);
 }
 .section_list {
+  position: relative;
 }
 .section_category {
   display: flex;
@@ -37,7 +38,6 @@
   padding: 15px 20px;
   border-radius: 52px;
   cursor: pointer;
-
   font-size: 14px;
   font-weight: 400;
 
@@ -149,7 +149,7 @@
   transform: translateY(1px);
 }
 
-/* Swiper 버튼 비활성 시 표현 */
+/* swiper 버튼 비활성시 표현 */
 .swiper-button-disabled {
   display: none !important;
 }

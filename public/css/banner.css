@@ -2,6 +2,10 @@
   position: relative;
   margin-top: 30px;
 }
+/* 스크롤 시 헤더가 반영 안되는 부분 반영해서 레이아욱 적용  */
+.banner_fix {
+  padding-top: 50px;
+}
 .banner_slide {
   display: flex;
   gap: 25px;
