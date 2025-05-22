@@ -1,4 +1,5 @@
 .tour {
+  position: relative;
   margin-top: 65px;
 }
 
@@ -50,8 +51,8 @@
 }
 
 .section_slide {
-  display: flex;
-  gap: 25px;
+  position: relative;
+
   margin-bottom: 20px;
 }
 .item {
@@ -146,4 +147,9 @@
 }
 .section_bts > a > img {
   transform: translateY(1px);
+}
+
+/* Swiper 버튼 비활성 시 표현 */
+.swiper-button-disabled {
+  display: none !important;
 }
