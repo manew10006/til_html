@@ -2,7 +2,7 @@
 // load 이벤트를 썻다
 window.addEventListener("load", function () {
   // api 주소
-  const apiUrl = "http://127.0.0.1:5500/public/api/tour.json";
+  const apiUrl = "./api/tour.json";
   // 현재 출력한 카테고리
   let cateFocusIndex = 0;
   // 카테고리 button 태그 DOM 보관

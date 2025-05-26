@@ -149,7 +149,26 @@
   transform: translateY(1px);
 }
 
-/* swiper 버튼 비활성시 표현 */
-.swiper-button-disabled {
-  display: none !important;
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .tour {
+    border-top: 8px solid #f4f4f4;
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+  .tour .section_top {
+    padding-bottom: 12px;
+  }
+  .tour .section_title {
+    font-size: 21px;
+  }
+  .tour .section_desc {
+    font-size: 15px;
+  }
+  .tour .section_category {
+    padding-bottom: 12px;
+  }
+  .section_category_bts > li > button {
+    padding: 9px 20px;
+  }
 }

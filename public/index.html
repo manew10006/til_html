@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>나의 til</title>
-    <!-- 외부라이브러리 -->
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
+    <!-- 외부라이브러리 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="css/common.css" />
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/tour.css" />
 
-    <!-- js 초기 코드  (상단이 좋은자리는 아니지만, js를 통해 html이 다 불러오고 js가 실행되도록 제어한다) -->
+    <!-- js 초기 코드  -->
     <script src="js/index.js"></script>
     <script src="js/header.js"></script>
     <script src="js/banner.js"></script>
@@ -29,7 +28,7 @@
   </head>
 
   <body>
-    <!-- 전체 레이아웃 //전체구조를 짜고 세부적으로 기록한다 , wrap :감싸다 -->
+    <!-- 전체 레이아웃  -->
     <div class="wrap">
       <!-- 상단 -->
       <header class="header">
@@ -53,8 +52,8 @@
                     placeholder="제품을 검색해 주세요."
                   />
                   <input
-                    type="submit"
                     class="search_form_button"
+                    type="submit"
                     value="검색"
                   />
                 </form>
@@ -105,28 +104,43 @@
           </div>
         </div>
       </header>
+      <!-- 모바일 상단 -->
+      <div class="m_header">
+        <div class="m_header_menu">
+          <a href="#">홈</a>
+          <a href="#">투어</a>
+          <a href="#">티켓</a>
+        </div>
+
+        <div class="m_header_search">
+          <a href="#">
+            <img src="images/btn_search.svg" alt="제품검색" />
+          </a>
+        </div>
+      </div>
+
       <!-- 메인 -->
-      <main>
+      <main class="main">
         <div class="layout">
-          <!-- banner  : A 담당자 -->
+          <!-- Banner -->
           <div class="banner">
-            <!-- 외부라이브러리 주의: 절대 swiper 단어를 고치지 않는다-->
+            <!-- 절대로 swiper 단어 고치지 않는다 -->
             <div class="swiper sw_banner">
               <div class="swiper-wrapper">
                 <!-- API 연동 -->
               </div>
-              <div class="swiper-pagination"></div>
             </div>
-            <button class="slide_bt banner_left">
+
+            <div class="swiper-pagination sw_banner_pg"></div>
+
+            <button class="slide_bt banner_prev slide_bt_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />
             </button>
 
-            <button class="slide_bt banner_right">
+            <button class="slide_bt banner_next slide_bt_right">
               <img src="images/slider_arrow.svg" alt="right" title="right" />
             </button>
           </div>
-
-          <!-- tour -->
           <!-- Tour -->
           <div class="tour">
             <div class="section_top">
@@ -149,11 +163,11 @@
                   </div>
                 </div>
 
-                <button class="slide_bt tour_prev banner_left">
+                <button class="slide_bt tour_prev slide_bt_left">
                   <img src="images/slider_arrow.svg" alt="left" title="left" />
                 </button>
 
-                <button class="slide_bt tour_next banner_right">
+                <button class="slide_bt tour_next slide_bt_right">
                   <img
                     src="images/slider_arrow.svg"
                     alt="right"
@@ -161,8 +175,8 @@
                   />
                 </button>
               </div>
-              <!-- end 추후 JSON 데이터 연동으로 변경 예정 -->
-              <!-- end목록영역 -->
+
+              <!--End 목록영역 -->
             </div>
             <div class="section_bts">
               <a href="#">
@@ -175,11 +189,11 @@
               </a>
             </div>
           </div>
-          <!-- trip -->
+          <!-- Trip -->
           <div></div>
-          <!-- tikect -->
+          <!-- Ticket -->
           <div></div>
-          <!-- live -->
+          <!-- Live -->
           <div></div>
         </div>
       </main>

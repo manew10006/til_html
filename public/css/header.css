@@ -1,50 +1,60 @@
-.header {
-  position: relative;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ebebeb;
-  z-index: 999999;
+main {
+  padding-top: 150px;
 }
-.header_down{
+
+.header {
   position: fixed;
   left: 0;
   top: 0;
+
+  z-index: 999;
   width: 100%;
-  z-index: 999999;
-  
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
 }
-.header_top {
-    /* 좌표 기준을 세워주자 */
-  position: relative;
+.header_down {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   width: 100%;
+}
+
+.header_top {
+  /* 좌표 기준을 세워주자 */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin: 20px 0;
+  width: 100%;
+
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+  padding: 20px 0;
 }
-.header_top_down{
-  margin: 0px;
+.header_top_down {
+  padding: 0px;
 }
+
 .header_top_left {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .logo > a > img {
-  width: 153px;
+  width: 152px;
   height: auto;
 }
 
-.serch {
+.search {
 }
 .search_down {
   position: absolute;
+  top: 6px;
   left: 350px;
-  top: 10px;
-
 }
+
 .search_form {
   display: flex;
   align-items: center;
@@ -52,32 +62,30 @@
 }
 
 .search_form_word {
-  /* calc( + ) 계산하는 수식, 기호 양쪽으로 띄어쓰기 해줘야함  */
   width: calc(100% - 50px);
   height: 50px;
   background-color: #f7f7f8;
   border: none;
-  /* border-radius: 왼쪽상단부터 시계방향 */
   border-radius: 25px 0px 0px 25px;
   padding-left: 15px;
 }
 .search_form_button {
   width: 50px;
   height: 50px;
-  background-color: #f7f7f8;
-  border: none;
-  border-radius: 0px 25px 25px 0px;
   font-size: 0;
-  cursor: pointer;
-  /*  background-color: red;
+
+  /* background-color: red;
   background-image: url("../images/btn_search.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
   background-size: 18px; */
 
   background: #f7f7f8 url("../images/btn_search.svg") no-repeat center;
+  background-color: #f7f7f8;
   background-size: 18px;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  cursor: pointer;
 }
 
 .header_top_right {
@@ -87,62 +95,68 @@
   display: flex;
   gap: 20px;
 }
-.member_down{
+.member_down {
   position: absolute;
+  top: 30px;
   right: 0;
-  top: 25px;
 }
+
 .member > li > a {
   font-size: 12px;
   font-weight: 700;
+  line-height: 16px;
   color: #000000;
-  line-height: 16px;`
 }
+
 .header_bottom {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .header_bottom_nav {
 }
 .nav {
   position: relative;
   display: flex;
-  gap: 0;
+  gap: 0px;
 }
-.nav::after{
-  content:"";
-  display: block;
+.nav::after {
   position: absolute;
-  right: 0;
   /* top: calc(100% - 50% - 24px / 2); */
   top: 50%;
-  transform: translateY(-50%);
+  right: 0;
+  display: block;
 
   width: 2px;
   height: 24px;
-  background: #e9e9e9;
+  background-color: #e9e9e9;
+  transform: translateY(-50%);
+  content: "";
 }
+
 .nav li a {
   position: relative;
+
   display: block;
+  padding: 20px 40px;
   font-size: 20px;
   font-weight: 400;
-  padding: 20px 40px;
 }
-.nav li a.focus{
+
+.nav li a.focus {
   font-weight: 700 !important;
 }
-.nav li a.focus::after{
-  content: "";
+
+.nav li a.focus::after {
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
 
   display: block;
   width: 100%;
   height: 4px;
   background-color: #1c1c1c;
+  content: "";
 }
 
 .header_bottom_eventmenu {
@@ -156,14 +170,58 @@
 .cupon > li > a {
   display: flex;
   align-items: center;
-  gap: 5px;
+  padding: 0 20px;
 
   font-size: 18px;
   font-weight: 600;
   color: #324b97;
-  padding: 0 20px;
+  gap: 5px;
+}
+.cupon > li > a > img {
+  transform: translateY(10%);
 }
 
-.cupon > li > a > img {
-  transform: translateY(5%);
+/* 모바일 헤더 */
+.m_header {
+  padding: 0 10px;
+
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 54px;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+  z-index: 999;
+}
+.m_header_menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.m_header_menu a {
+  font-size: 22px;
+  font-weight: 400;
+}
+.m_header_search {
+  display: flex;
+  align-items: center;
+}
+.m_header_search a {
+}
+
+/* 반응형 작업 */
+@media all and (max-width: 1024px) {
+  main {
+    padding-top: 54px;
+  }
+  .header {
+    display: none;
+  }
+  .m_header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
 }

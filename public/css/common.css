@@ -1,12 +1,10 @@
-@charset "utf-8"
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-  /* 모든 값 초기화 */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* 사이트 탭키 비활성화 */
   outline-style: none;
 }
 
@@ -27,53 +25,75 @@ html {
 
 body {
   width: 100%;
-  /* rem : 비율 */
   font-size: 1rem;
-  /* ▼디자인 보고 수정 */
+  /* 디자인 보고 수정 */
   color: #000000;
   /* 글꼴이 필요로 함. */
   font-family: "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
-
 .wrap {
   width: 100%;
 }
-
 .layout {
   max-width: 1280px;
   width: 100%;
-  margin: 0 auto;
 
-  /* margin : 위아래  좌우; 단축해서 적을 수 있다.
-  margin-top: 0;
+  margin: 0 auto;
+  /* margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto; */
 }
-
 /* 반응형 작업 */
-body {
-  background-color: aqua;
-}
-@media screen and (max-width: 1024px) {
-  body {
-    background-color: bisque;
+@media all and (max-width: 1280px) {
+  .layout {
+    max-width: 1024px;
   }
 }
-@media screen and (max-width: 960px) {
-  body {
-    background-color: blue;
+@media all and (max-width: 1024px) {
+  .layout {
+    max-width: 760px;
   }
 }
-@media screen and (max-width: 760px) {
-  body {
-    background-color: palevioletred;
+@media all and (max-width: 760px) {
+  .layout {
+    max-width: 100%;
   }
 }
-@media screen and (max-width: 640px) {
-  body {
-    background-color: yellowgreen;
-  }
+
+/* header 가 fixed 가 되면 강제로 padding 넣기 */
+.main_fixed {
+  padding-top: 150px;
+}
+
+/* sldie 관련 공통 */
+.slide_bt {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  border: 1px solid #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+
+  z-index: 100;
+}
+.slide_bt_left {
+  left: 0;
+  transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+}
+.slide_bt_right {
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+}
+/* swiper 버튼 비활성시 표현 */
+.swiper-button-disabled {
+  display: none !important;
 }
