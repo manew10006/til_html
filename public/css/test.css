@@ -1,0 +1,18 @@
+.wrap {
+  position: relative;
+}
+.wrap .header {
+  width: 100%;
+}
+.wrap .header_left {
+  position: relative;
+}
+.wrap .header_left_box {
+  position: relative;
+}
+.wrap .main {
+  display: flex;
+}
+.wrap .footer {
+  display: flex;
+}/*# sourceMappingURL=test.css.map */

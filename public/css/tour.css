@@ -171,4 +171,50 @@
   .section_category_bts > li > button {
     padding: 9px 20px;
   }
+
+  .tour .sw_tour {
+    width: 1260px !important;
+  }
+  .section_slide_wrap {
+    width: 760px;
+    overflow: hidden;
+  }
+
+  /* 반응형 슬라이드 높이 설정 */
+  .item {
+    height: 222px !important;
+  }
+  .item_image {
+    height: 138px !important;
+    margin-bottom: 15px !important;
+  }
+  .item_name {
+    left: 8px;
+    top: 127px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 3px;
+  }
+  .item_cupon {
+  }
+  .item_desc {
+  }
+  .item_price {
+    font-size: 14px;
+  }
+  .item_price > b {
+    font-size: 14px;
+  }
+  .item_text {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .section_bts > a {
+    width: 95%;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 15px 20px;
+  }
 }

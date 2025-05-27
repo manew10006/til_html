@@ -148,12 +148,72 @@ window.addEventListener("load", function () {
 
     // 3. 슬라이드를 생성해야 합니다.
     swTour = new Swiper(".sw_tour", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
+      // 한줄에 4개 나옴
+      slidesPerView: 4,
+      // 슬라이드 사이 공간(5픽셀)
+      spaceBetween: 5,
+      // 한번에 4개씩 이동
+      slidesPerGroup: 4,
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+
       navigation: {
         nextEl: ".tour_next",
         prevEl: ".tour_prev",
+      },
+
+      breakpoints: {
+        640: {
+          // 한화면에 4개
+          slidesPerView: 4,
+          // 갭은 10픽셀
+          spaceBetween: 10,
+          // 한번에 4개 이동
+          slidesPerGroup: 4,
+          grid: {
+            // 1줄만 나오기
+            rows: 1,
+            fill: "row",
+          },
+        },
+        760: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+          slidesPerGroup: 4,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+        960: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          slidesPerGroup: 4,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+          slidesPerGroup: 2,
+          grid: {
+            rows: 1,
+            fill: "row",
+          },
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 26,
+          slidesPerGroup: 3,
+          grid: {
+            rows: 1,
+            fill: "row",
+          },
+        },
       },
     });
 
